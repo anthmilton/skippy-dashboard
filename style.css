@@ -156,6 +156,17 @@ main {
     color: #fff;
 }
 
+.tag.complete {
+    background: #2ecc71;
+    color: #fff;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px #2ecc71; }
+    to { box-shadow: 0 0 20px #2ecc71, 0 0 30px #2ecc71; }
+}
+
 .suggestions ul {
     list-style: none;
 }
