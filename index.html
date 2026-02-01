@@ -10,145 +10,172 @@
     <header>
         <h1>🍺 Skippy's Command Center</h1>
         <p class="subtitle">Anthony's Projects & Progress</p>
-        <p class="last-updated">Last updated: <span id="timestamp">2026-01-31 19:20 UTC</span></p>
+        <p class="last-updated">Last updated: <span id="timestamp">2025-02-01</span></p>
     </header>
 
     <main>
-        <section class="status-card priority">
-            <h2>🎯 JUST COMPLETED! 🎉</h2>
-            <div class="project">
-                <h3>Sign Shop OS</h3>
-                <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
-                <p class="progress-text">100% complete!</p>
-                <p>Complete sign shop management system with pricing calculator, customers, estimates, work orders, invoices, and materials management. Ready for production!</p>
-                <p class="status">Status: <span class="tag complete">COMPLETE ✨</span></p>
-            </div>
-        </section>
+        <!-- Top Row: Priority + Workspace Tools -->
+        <div class="top-row">
+            <section class="status-card priority">
+                <h2>🎯 Priority</h2>
+                <div class="project">
+                    <h3>Sign Shop OS <span class="tag complete">COMPLETE ✨</span></h3>
+                    <div class="progress-bar"><div class="progress" style="width: 100%"></div></div>
+                    <p>Ready for deployment! Needs PostgreSQL + hosting.</p>
+                </div>
+                <div class="project">
+                    <h3>CRM App <span class="tag almost">95%</span></h3>
+                    <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+                    <p>Just needs bug fixes to finish.</p>
+                </div>
+            </section>
 
-        <section class="status-card">
-            <h2>💼 Business Projects</h2>
-            
-            <div class="project">
-                <h3>CRM App</h3>
-                <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
-                <p class="progress-text">95% complete</p>
-                <p>Lead capture for sales team. Just needs bug fixes.</p>
-                <p class="status">Status: <span class="tag almost">Almost Done</span></p>
-            </div>
+            <section class="status-card workspace">
+                <h2>🗂️ Quick Access</h2>
+                <div class="quick-links">
+                    <div class="quick-link">
+                        <span class="icon">📁</span>
+                        <div>
+                            <strong>Projects</strong>
+                            <small>9 tracked</small>
+                        </div>
+                    </div>
+                    <div class="quick-link">
+                        <span class="icon">📋</span>
+                        <div>
+                            <strong>Decisions</strong>
+                            <small>Log</small>
+                        </div>
+                    </div>
+                    <div class="quick-link">
+                        <span class="icon">💡</span>
+                        <div>
+                            <strong>Ideas</strong>
+                            <small>Inbox</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <div class="project">
-                <h3>Mural Printing Expansion</h3>
-                <p>Leverage the HP Latex 700 for more mural work.</p>
-                <p class="status">Status: <span class="tag planning">Planning</span></p>
-            </div>
-
-            <div class="project">
-                <h3>AI Image Generator → KDP Books</h3>
-                <p>Coloring books & illustrated public domain books. Some listed, no sales yet.</p>
-                <p class="status">Status: <span class="tag live">Live on KDP</span></p>
-            </div>
-        </section>
-
-        <section class="status-card">
-            <h2>🎣 Fishing Ventures</h2>
-            
-            <div class="project">
-                <h3>Screen Shields</h3>
-                <p>Protective screens for fishfinder graphs. Amazon launch.</p>
-                <ul>
-                    <li>✅ Material sourced</li>
-                    <li>✅ Shapes/patterns ready</li>
-                    <li>🔄 Testing phase</li>
-                    <li>⏳ Marketing, logos, packaging</li>
+            <section class="status-card suggestions">
+                <h2>💡 Next Actions</h2>
+                <ul class="compact-list">
+                    <li>Deploy Sign Shop OS</li>
+                    <li>Fix CRM bugs</li>
+                    <li>Screen Shields: logo & marketing</li>
+                    <li>Finalize Bay Armor plan</li>
                 </ul>
-                <p class="status">Status: <span class="tag wip">Testing</span></p>
-            </div>
+            </section>
+        </div>
 
-            <div class="project">
-                <h3>Bay Armor</h3>
-                <p>Two product lines: clear protective overlays + printed re-skin overlays for lures.</p>
-                <p class="status">Status: <span class="tag planning">Needs Plan Finalized</span></p>
-            </div>
-
-            <div class="project">
-                <h3>Fishing Log App</h3>
-                <p>Private tournament prep tool. Heat maps, catch tracking. Data stays private.</p>
-                <p class="status">Status: <span class="tag idea">Concept</span></p>
-            </div>
-        </section>
-
-        <section class="status-card">
-            <h2>📱 Other Apps</h2>
-            
-            <div class="project">
-                <h3>Time Tracking App</h3>
-                <p>Personal productivity tracker. See where your time goes.</p>
-                <p class="status">Status: <span class="tag wip">Built, Not Functional</span></p>
-            </div>
-
-            <div class="project">
-                <h3>Photo/Content Editing App</h3>
-                <p>Unique concept for content creators.</p>
-                <p class="status">Status: <span class="tag idea">Early Stage</span></p>
-            </div>
-        </section>
-
-        <section class="status-card suggestions">
-            <h2>💡 Skippy's Suggestions</h2>
-            <ul>
-                <li><strong>🎉 HUGE WIN: Sign Shop OS is DONE!</strong> — Complete backend, database, pricing calculator, all APIs. You now have a production-ready sign shop management system!</li>
-                <li><strong>Next Priority: Deploy Sign Shop OS</strong> — Set up a PostgreSQL database and deploy. This will immediately replace Cyrious.</li>
-                <li><strong>Quick win: CRM bugs</strong> — If those bugs are small, knocking them out gives you another finished product.</li>
-                <li><strong>Screen Shields momentum</strong> — You're in testing. What's blocking the marketing/logo work?</li>
-            </ul>
-        </section>
-
-        <section class="status-card workspace">
-            <h2>🗂️ Workspace Organization</h2>
-            <p class="section-intro">Tools for staying organized and maintaining context across sessions.</p>
-            
-            <div class="org-grid">
-                <div class="org-item">
-                    <h3>📁 Project Status Files</h3>
-                    <p><code>projects/</code> — 9 projects tracked</p>
-                    <ul>
-                        <li>signswift.md — Sign Shop OS ✅</li>
-                        <li>sales-crm.md — CRM App</li>
-                        <li>screen-shields.md — Fishfinder Protectors</li>
-                        <li>bay-armor.md — Lure Overlays</li>
-                        <li>fishing-log-app.md — Tournament Tool</li>
-                        <li>time-tracking-app.md — Productivity</li>
-                        <li>content-editing-app.md — Creator Tool</li>
-                        <li>mural-expansion.md — Latex 700</li>
-                        <li>kdp-books.md — AI Books</li>
-                    </ul>
-                    <p class="note">Each has: current state, blockers, next actions, session log.</p>
+        <!-- Middle Row: Projects Grid -->
+        <div class="projects-grid">
+            <section class="status-card">
+                <h2>💼 Business</h2>
+                <div class="project-mini">
+                    <span class="name">Mural Expansion</span>
+                    <span class="tag planning">Planning</span>
                 </div>
-
-                <div class="org-item">
-                    <h3>📋 Decision Log</h3>
-                    <p><code>decisions/</code></p>
-                    <p>Track major decisions with context and reasoning. Never wonder "why did we do that?" again.</p>
-                    <p class="note">Format: <code>YYYY-MM-DD-description.md</code></p>
+                <div class="project-mini">
+                    <span class="name">KDP Books</span>
+                    <span class="tag live">Live</span>
                 </div>
+            </section>
 
-                <div class="org-item">
-                    <h3>💡 Idea Inbox</h3>
-                    <p><code>ideas/INBOX.md</code></p>
-                    <p>Quick capture for half-baked ideas. Toss them here, we'll triage weekly.</p>
-                    <p class="note">New → Project / Maybe Someday / Trash</p>
+            <section class="status-card">
+                <h2>🎣 Fishing</h2>
+                <div class="project-mini">
+                    <span class="name">Screen Shields</span>
+                    <span class="tag wip">Testing</span>
+                </div>
+                <div class="project-mini">
+                    <span class="name">Bay Armor</span>
+                    <span class="tag planning">Planning</span>
+                </div>
+                <div class="project-mini">
+                    <span class="name">Fishing Log App</span>
+                    <span class="tag idea">Concept</span>
+                </div>
+            </section>
+
+            <section class="status-card">
+                <h2>📱 Apps</h2>
+                <div class="project-mini">
+                    <span class="name">Time Tracker</span>
+                    <span class="tag wip">WIP</span>
+                </div>
+                <div class="project-mini">
+                    <span class="name">Content Editor</span>
+                    <span class="tag idea">Early</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bottom Row: Full Project List -->
+        <section class="status-card full-width">
+            <h2>📊 All Projects Status</h2>
+            <div class="projects-table">
+                <div class="project-row header">
+                    <span class="col-name">Project</span>
+                    <span class="col-progress">Progress</span>
+                    <span class="col-status">Status</span>
+                    <span class="col-file">File</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Sign Shop OS</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:100%"></div></div></span>
+                    <span class="col-status"><span class="tag complete">Complete</span></span>
+                    <span class="col-file">signswift.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">CRM App</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:95%"></div></div></span>
+                    <span class="col-status"><span class="tag almost">95%</span></span>
+                    <span class="col-file">sales-crm.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Screen Shields</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:60%"></div></div></span>
+                    <span class="col-status"><span class="tag wip">Testing</span></span>
+                    <span class="col-file">screen-shields.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Bay Armor</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:40%"></div></div></span>
+                    <span class="col-status"><span class="tag planning">Planning</span></span>
+                    <span class="col-file">bay-armor.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">KDP Books</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:50%"></div></div></span>
+                    <span class="col-status"><span class="tag live">Live</span></span>
+                    <span class="col-file">kdp-books.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Mural Expansion</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:5%"></div></div></span>
+                    <span class="col-status"><span class="tag planning">Planning</span></span>
+                    <span class="col-file">mural-expansion.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Time Tracker</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:30%"></div></div></span>
+                    <span class="col-status"><span class="tag wip">WIP</span></span>
+                    <span class="col-file">time-tracking-app.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Fishing Log</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:10%"></div></div></span>
+                    <span class="col-status"><span class="tag idea">Concept</span></span>
+                    <span class="col-file">fishing-log-app.md</span>
+                </div>
+                <div class="project-row">
+                    <span class="col-name">Content Editor</span>
+                    <span class="col-progress"><div class="mini-bar"><div class="fill" style="width:10%"></div></div></span>
+                    <span class="col-status"><span class="tag idea">Early</span></span>
+                    <span class="col-file">content-editing-app.md</span>
                 </div>
             </div>
-        </section>
-
-        <section class="status-card">
-            <h2>📋 What's Next</h2>
-            <ul>
-                <li><strong>Deploy Sign Shop OS:</strong> Ready to replace Cyrious! Just needs a PostgreSQL database and hosting.</li>
-                <li><strong>CRM App:</strong> Share the bugs you mentioned so we can finish this one too.</li>
-                <li><strong>Screen Shields:</strong> Brand name ideas? Marketing direction? Logo concepts?</li>
-                <li><strong>Other projects:</strong> What should we tackle next from your list?</li>
-            </ul>
         </section>
     </main>
 

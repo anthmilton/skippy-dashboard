@@ -14,39 +14,59 @@ body {
 
 header {
     text-align: center;
-    margin-bottom: 30px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ffd700;
     margin-bottom: 5px;
 }
 
 .subtitle {
     color: #888;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .last-updated {
     color: #666;
-    font-size: 0.85rem;
-    margin-top: 10px;
+    font-size: 0.8rem;
+    margin-top: 5px;
 }
 
 main {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
+/* Top Row - 3 columns */
+.top-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Middle Row - 3 columns */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+/* Cards */
 .status-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-card.full-width {
+    grid-column: 1 / -1;
 }
 
 .status-card.priority {
@@ -59,17 +79,23 @@ main {
     background: rgba(78, 205, 196, 0.05);
 }
 
+.status-card.workspace {
+    border-color: #9b59b6;
+    background: rgba(155, 89, 182, 0.05);
+}
+
 .status-card h2 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
     color: #fff;
 }
 
+/* Projects in priority card */
 .project {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 10px;
 }
 
 .project:last-child {
@@ -77,33 +103,27 @@ main {
 }
 
 .project h3 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #4ecdc4;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .project p {
-    color: #bbb;
-    font-size: 0.95rem;
-    margin-bottom: 5px;
-    line-height: 1.5;
-}
-
-.project ul {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-.project li {
-    color: #bbb;
-    margin-bottom: 5px;
+    color: #999;
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 .progress-bar {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    height: 8px;
-    margin: 10px 0;
+    height: 6px;
+    margin: 8px 0;
     overflow: hidden;
 }
 
@@ -111,168 +131,173 @@ main {
     background: linear-gradient(90deg, #4ecdc4, #44a08d);
     height: 100%;
     border-radius: 10px;
-    transition: width 0.3s ease;
 }
 
-.progress-text {
-    font-size: 0.85rem;
-    color: #4ecdc4;
+/* Quick Links */
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.status {
-    margin-top: 10px;
+.quick-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
-.tag {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 600;
+.quick-link:hover {
+    background: rgba(0, 0, 0, 0.3);
 }
 
-.tag.wip {
-    background: #f39c12;
-    color: #000;
+.quick-link .icon {
+    font-size: 1.5rem;
 }
 
-.tag.almost {
-    background: #27ae60;
+.quick-link strong {
+    display: block;
+    font-size: 0.9rem;
     color: #fff;
 }
 
-.tag.planning {
-    background: #3498db;
-    color: #fff;
+.quick-link small {
+    color: #888;
+    font-size: 0.75rem;
 }
 
-.tag.live {
-    background: #9b59b6;
-    color: #fff;
-}
-
-.tag.idea {
-    background: #666;
-    color: #fff;
-}
-
-.tag.complete {
-    background: #2ecc71;
-    color: #fff;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { box-shadow: 0 0 5px #2ecc71; }
-    to { box-shadow: 0 0 20px #2ecc71, 0 0 30px #2ecc71; }
-}
-
-.suggestions ul {
+/* Compact list */
+.compact-list {
     list-style: none;
 }
 
-.suggestions li {
+.compact-list li {
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    border-left: 3px solid #4ecdc4;
+}
+
+.compact-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Mini project cards */
+.project-mini {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.project-mini:last-child {
+    margin-bottom: 0;
+}
+
+.project-mini .name {
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.tag.wip { background: #f39c12; color: #000; }
+.tag.almost { background: #27ae60; color: #fff; }
+.tag.planning { background: #3498db; color: #fff; }
+.tag.live { background: #9b59b6; color: #fff; }
+.tag.idea { background: #666; color: #fff; }
+.tag.complete { background: #2ecc71; color: #fff; }
+
+/* Projects Table */
+.projects-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr 1.5fr;
+    align-items: center;
     padding: 10px 15px;
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    margin-bottom: 10px;
-    border-left: 3px solid #4ecdc4;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.project-row.header {
+    background: rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.col-name { color: #ddd; }
+.col-file { color: #666; font-family: monospace; font-size: 0.75rem; }
+
+.mini-bar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    height: 8px;
+    width: 100%;
+    max-width: 120px;
+    overflow: hidden;
+}
+
+.mini-bar .fill {
+    background: linear-gradient(90deg, #4ecdc4, #44a08d);
+    height: 100%;
+    border-radius: 4px;
 }
 
 footer {
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-/* Workspace Organization Section */
-.status-card.workspace {
-    border-color: #9b59b6;
-    background: rgba(155, 89, 182, 0.05);
-}
-
-.section-intro {
-    color: #888;
-    margin-bottom: 15px;
-    font-size: 0.95rem;
-}
-
-.org-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.org-item {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    margin-top: 30px;
     padding: 15px;
-}
-
-.org-item h3 {
-    font-size: 1rem;
-    color: #9b59b6;
-    margin-bottom: 8px;
-}
-
-.org-item p {
-    color: #bbb;
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-}
-
-.org-item code {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    color: #4ecdc4;
-}
-
-.org-item ul {
-    list-style: none;
-    margin: 10px 0;
-}
-
-.org-item li {
-    padding: 4px 0;
-    font-size: 0.9rem;
-}
-
-.org-item a {
-    color: #4ecdc4;
-    text-decoration: none;
-}
-
-.org-item a:hover {
-    text-decoration: underline;
-}
-
-.org-item .note {
     color: #666;
-    font-size: 0.8rem;
-    font-style: italic;
-    margin-top: 8px;
-    margin-bottom: 0;
+    font-size: 0.85rem;
 }
 
-/* Mobile responsive */
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
+/* Responsive */
+@media (max-width: 1000px) {
+    .top-row, .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    body { padding: 10px; }
+    h1 { font-size: 1.4rem; }
+    
+    .top-row, .projects-grid {
+        grid-template-columns: 1fr;
     }
     
-    h1 {
-        font-size: 1.5rem;
+    .project-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
     }
     
-    .status-card {
-        padding: 15px;
-    }
-    
-    .project {
-        padding: 12px;
+    .project-row .col-file {
+        display: none;
     }
 }
